@@ -23,6 +23,110 @@ page_data:
       color: "#2FD0ED"
 
   list:
+    # example jojo
+    - type: id_example
+      project_name: "Delsey"
+      project_excerpt: "Exemples"
+      img: ":project1_thumb.jpg"
+      img_title: "img title1"
+      date: "2021-03-13"
+      post: |
+        # Examples
+
+        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+
+        ### Headings (centered)
+        {:data-align="center"}
+
+        # Heading 1
+
+        ## Heading 2
+
+        ### Heading 3
+
+        #### Heading 4
+
+        ##### Heading 5
+
+        ###### Heading 6
+
+        ***
+
+        ### Paragraphs
+
+        #### Paragraph
+
+        **William Shakespeare**, Let me not to the marriage of true minds
+        Admit impediments. Love is not love
+        Which alters when it alteration finds,
+        Or bends with the remover to remove.
+        O no, it is an ever-fixed mark
+        That looks on tempests and is never shaken;
+        It is the star to every wand'ring barque,
+        Whose worth's unknown, although his height be taken.
+        Love's not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        Love alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom.
+        If this be error and upon me proved,
+        I never writ, nor no man ever loved.
+
+        #### Texts
+
+        Quoted text `Hello world`
+
+        Bold text **Hello world**
+
+        Italic text _Hello world_
+
+        kbd text <kbd>Hello world</kbd>
+
+        #### Blockquote
+
+        > **William Shakespeare**, Let me not to the marriage of true minds
+        Admit impediments. Love is not love
+        Which alters when it alteration finds,
+        Or bends with the remover to remove.
+        O no, it is an ever-fixed mark
+        That looks on tempests and is never shaken;
+        It is the star to every wand'ring barque,
+        Whose worth's unknown, although his height be taken.
+        Love's not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        Love alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom.
+        If this be error and upon me proved,
+        I never writ, nor no man ever loved.
+
+        ### Link
+
+        This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
+
+        ### Picture
+
+        ![such a lovely place](:projects-heading.jpg)
+
+        ### Picture (centered)
+
+        ![such a lovely place](:project1_thumb.jpg){:data-align="center"}
+
+        ### Lists
+
+        - Apple
+        - Banana
+        - Orange
+
+        1. Fruits
+            1. Apples
+                - Granny Smith
+                - Mutsu
+            1. Bananas
+                - Cavendish
+                - Red
+        1. Vegetables
+
+        ***
+
     # example
     - type: id_example
       project_name: "Exemple de projet"
