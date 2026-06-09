@@ -12,6 +12,18 @@ page_data:
     back_color: "lightblue"
 
   category:
+    - title: "Delsey"
+      type: id_delsey
+      color: "yellow"
+    - title: "Ukulélé"
+      type: id_ukulélé
+      color: "Brown"
+    - title: "La citée européenne des scénariste"
+      type: id_la citée européenne des scénariste 
+      color: "#62b462"
+    - title: "Synaé"
+      type: id_synaé
+      color: "#2FD0ED"
     - title: "Exemple"
       type: id_example
       color: "gray"
@@ -26,22 +38,23 @@ page_data:
     # example jojo
     - type: id_example
       project_name: "Delsey"
-      project_excerpt: "Simplifier le voyage grâce à la technologie
-Comment transformer un produit en expérience utilisateur ?"
+      project_excerpt: "Simplifier le voyage grâce à la technologie."
       img: ":Couverture-Delsey.png"
-      img_title: "img title1"
-      date: "2021-03-13"
+      img_title: "img couverture delsey"
+      date: "2025-02-05"
       post: |
-        # Examples
+        # Delsey
 
-        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+        Comment transformer un produit en expérience utilisateur ?
 
-        ### Headings (centered)
-        {:data-align="center"}
-
-        # Heading 1
-
-        ## Heading 2
+        # Mon rôle
+          Conception de A à Z
+        ## Le constat
+          Marché en forte croissance
+          Produits innovants mais peu adoptés
+          Expérience utilisateur encore complexe
+        img: ":Constat-delsey.png"
+        img: ":Constat2-delsey.png"
 
         ### Heading 3
 
