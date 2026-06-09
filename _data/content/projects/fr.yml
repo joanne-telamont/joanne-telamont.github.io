@@ -53,6 +53,7 @@ page_data:
           Marché en forte croissance
           Produits innovants mais peu adoptés
           Expérience utilisateur encore complexe
+
       img: ":Constat-delsey.png"
       img: ":Constat2-delsey.png"
 
@@ -63,8 +64,12 @@ page_data:
 
       img: "icone-valise-connectée.png"
 
-        #### Heading 4
+        #### L'opportunité
+          Créer une solution réellement utile
+          Simplifier le parcours utilisateur
+          Apporter de la valeur dans l’usage quotidien
 
+      img: ""
         ##### Heading 5
 
         ###### Heading 6
