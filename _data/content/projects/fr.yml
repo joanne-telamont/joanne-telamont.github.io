@@ -53,10 +53,15 @@ page_data:
           Marché en forte croissance
           Produits innovants mais peu adoptés
           Expérience utilisateur encore complexe
-        img: ":Constat-delsey.png"
-        img: ":Constat2-delsey.png"
+      img: ":Constat-delsey.png"
+      img: ":Constat2-delsey.png"
 
-        ### Heading 3
+        ### Les problèmes à résoudre
+          Les valises connectées sont perçues comme gadgets
+          le manque d’utilité concrète
+          Les freins -> le prix, la sécurité, la complexité de l'utilisation
+
+      img: "icone-valise-connectée.png"
 
         #### Heading 4
 
