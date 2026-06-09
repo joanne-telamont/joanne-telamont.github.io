@@ -26,8 +26,9 @@ page_data:
     # example jojo
     - type: id_example
       project_name: "Delsey"
-      project_excerpt: "Exemples"
-      img: ":project1_thumb.jpg"
+      project_excerpt: "Simplifier le voyage grâce à la technologie
+Comment transformer un produit en expérience utilisateur ?"
+      img: ":Couverture-Delsey.png"
       img_title: "img title1"
       date: "2021-03-13"
       post: |
