@@ -54,8 +54,8 @@ page_data:
           Produits innovants mais peu adoptés
           Expérience utilisateur encore complexe
 
-      img: ":Constat-delsey.png"
-      img: ":Constat2-delsey.png"
+      img: "Constat-delsey.png"
+      img: "Constat2-delsey.png"
 
         ### Les problèmes à résoudre
           Les valises connectées sont perçues comme gadgets
