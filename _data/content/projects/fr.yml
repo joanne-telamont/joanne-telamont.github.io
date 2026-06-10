@@ -14,29 +14,20 @@ page_data:
   category:
     - title: "Delsey"
       type: id_delsey
-      color: "yellow"
+      color: "orange"
     - title: "Ukulélé"
       type: id_ukulélé
       color: "Brown"
     - title: "La citée européenne des scénariste"
       type: id_la citée européenne des scénariste 
-      color: "#62b462"
+      color: "green"
     - title: "Synaé"
       type: id_synaé
-      color: "#2FD0ED"
-    - title: "Exemple"
-      type: id_example
-      color: "gray"
-    - title: "Image"
-      type: id_picture
-      color: "#62b462"
-    - title: "Citation"
-      type: id_quote
-      color: "#2FD0ED"
+      color: "blue"
 
   list:
     # example jojo
-    - type: id_example
+    - type: id_projet
       project_name: "Delsey"
       project_excerpt: "Simplifier le voyage grâce à la technologie."
       img: ":Couverture-Delsey.png"
@@ -45,31 +36,31 @@ page_data:
       post: |
         # Delsey
 
-        Simplifier le voyage grâce à la technologie.
+        Comment transformer un produit en expérience utilisateur ?
 
-        ### Comment transformer un produit en expérience utilisateur ?
+        ### Simplifier le voyage grâce à la technologie.
         {:data-align="center"}
 
-        # Mon rôle
+        ###### Mon rôle
           Conception de A à Z
 
-        ## Le constat
+        ###### Le constat
           Marché en forte croissance
           Produits innovants mais peu adoptés
           Expérience utilisateur encore complexe
           
 
-        ### Les problèmes à résoudre
+        ###### Les problèmes à résoudre
           Les valises connectées sont perçues comme gadgets
           le manque d’utilité concrète
           Les freins -> le prix, la sécurité, la complexité de l'utilisation
 
-        #### L'opportunité
+        ###### L'opportunité
           Créer une solution réellement utile
           Simplifier le parcours utilisateur
           Apporter de la valeur dans l’usage quotidien
 
-        ##### Les insights clés
+        ###### Les insights clés
           Les utilisateurs ne veulent pas plus de technologie
           Ils veulent moins d’effort
 
@@ -78,39 +69,38 @@ page_data:
           Un assistant de voyage intelligent
           Une expérience simplifiée
 
-        ####### Les features différenciantes
+        ###### Les features différenciantes
           Lift – la valise qui s’élève :
           Réduction de l’effort physique
           Innovation utile
           Expérience unique
 
-        ######## L'expérience utilisateur
+        ###### L'expérience utilisateur
           Navigation simple
           Fonctionnalités accessibles
           Parcours fluide
 
-        ######### La stratégie digitale     
+        ###### La stratégie digitale     
           SEO : contenu éducatif
           SEA / SMA : acquisition
           Social media : engagement
 
-        ########## Les réseaux sociaux
+        ######Les réseaux sociaux
           Vidéo démonstration
           Campagnes publicitaires
           Influence & contenu
 
-        ########### La gestion de projet
+        ###### La gestion de projet
           Méthode Hybride: Cascade et Agile
           Sprints & itérations
           Pilotage performance
 
-
-        ############ Les impacts attendus
+        ###### Les impacts attendus
           Augmentation adoption
           Amélioration expérience utilisateur
           Croissance des ventes
 
-        ############# La conclusion
+        ###### La conclusion
           Transformer un produit en solution
           Placer l’utilisateur au centre
           Créer de la valeur durable
