@@ -27,7 +27,7 @@ page_data:
 
   list:
     # example jojo
-    - type: id_projet
+    - type: id_example
       project_name: "Delsey"
       project_excerpt: "Simplifier le voyage grâce à la technologie."
       img: ":Couverture-Delsey.png"
