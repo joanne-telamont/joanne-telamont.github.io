@@ -43,33 +43,6 @@ page_data:
       img_title: "img couverture delsey"
       date: "2025-02-05"
       post: |
-        # Delsey
-
-        Comment transformer un produit en expérience utilisateur ?
-
-        # Mon rôle
-          Conception de A à Z
-        ## Le constat
-          Marché en forte croissance
-          Produits innovants mais peu adoptés
-          Expérience utilisateur encore complexe
-
-      img: "Constat-delsey.png"
-      img: "Constat2-delsey.png"
-
-         ### Les problèmes à résoudre
-          Les valises connectées sont perçues comme gadgets
-          le manque d’utilité concrète
-          Les freins -> le prix, la sécurité, la complexité de l'utilisation
-
-      img: "icone-valise-connectée.png"
-
-        #### L'opportunité
-          Créer une solution réellement utile
-          Simplifier le parcours utilisateur
-          Apporter de la valeur dans l’usage quotidien
-
-      img: "questionnaire-opportunite-delsey.png"
         ##### Heading 5
 
         ###### Heading 6
