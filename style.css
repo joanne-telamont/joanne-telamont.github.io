@@ -1,0 +1,974 @@
+/* ==========================================================================
+   PORTFOLIO — FEUILLE DE STYLE COMMUNE
+   Variables et couleurs (harmonisées avec la nav F4B183 et l'aside FFD966)
+   ========================================================================== */
+:root {
+  --nav-bg: rgba(244, 177, 131, 0.5);    /* F4B183 à 50% */
+  --nav-active: rgba(255, 217, 102);     /* FFD966 */
+  --aside-bg: rgba(255, 217, 102, 0.5);  /* FFD966 à 50% */
+  --text-color: #111111;
+  --text: #111111;
+  --muted: #555555;
+  --muted-warm: #6b5b3e;
+  --card: rgba(244, 177, 131, 0.12);
+  --border: rgba(244, 177, 131, 0.40);
+  --tag: rgba(255, 217, 102, 0.45);
+}
+
+/* ==========================================================================
+   Reset et base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Structure générale : aside pleine hauteur + colonne (navbar/contenu/footer)
+   ========================================================================== */
+.page-wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.main-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   Aside gauche
+   ========================================================================== */
+aside.sidebar {
+  width: 8.5cm;
+  flex: 0 0 8.5cm;
+  background-color: var(--aside-bg);
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+}
+
+aside.sidebar img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+aside.sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+aside.sidebar h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: brown; /* comme les autres titres h3 du site */
+  margin-bottom: 12px;
+}
+
+aside.sidebar p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+aside.sidebar .liens a {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+aside.sidebar .liens a:hover {
+  text-decoration: underline;
+}
+
+aside.sidebar .liens p {
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* L'adresse postale tient sur une seule ligne */
+aside.sidebar .liens p:first-of-type {
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Barre de navigation : commence au bord de l'aside
+   ========================================================================== */
+nav.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-bg);
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(2px);
+}
+
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav.navbar ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav.navbar ul li a {
+  display: block;
+  padding: 1rem 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+nav.navbar ul li a:hover {
+  background-color: var(--nav-active);
+}
+
+nav.navbar ul li a.active {
+  background-color: var(--nav-active);
+}
+
+/* ==========================================================================
+   Fil d'Ariane
+   ========================================================================== */
+nav.breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+nav.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+nav.breadcrumb span.separator {
+  margin: 0 0.4rem;
+}
+
+/* ==========================================================================
+   Conteneurs de contenu (les pages utilisent l'un des 3 schémas suivants)
+   ========================================================================== */
+/* Schéma A : Mon expertise, Mentions légales, Index -> .wrapper directement dans .main-column */
+.main-column > .wrapper {
+  flex: 1;
+  max-width: 1200px;
+  padding: 40px 40px 40px 2cm;
+}
+
+/* Schéma B : Mes projets -> .content (padding) contenant .wrapper (largeur max seulement) */
+.content {
+  flex: 1;
+  padding: 40px 40px 40px 2cm;
+}
+
+.content > .wrapper {
+  max-width: 1200px;
+}
+
+/* Schéma C : pages projets + cursus -> <main class="content"> directement */
+main.content {
+  flex: 1;
+  padding: 1.5rem 2rem 3rem 2cm;
+  max-width: 1100px;
+}
+
+/* ==========================================================================
+   Typographie commune
+   ========================================================================== */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+h1 + h2,
+.hero + h2 {
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: brown;
+}
+
+h3.section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  margin-top: 2.5rem;
+}
+
+section h3:first-of-type {
+  margin-top: 0;
+}
+
+p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--muted-warm);
+}
+
+/* Liste de points clés */
+.feature-list {
+  list-style: disc;
+  margin: 0 0 16px 1.2rem;
+}
+
+.feature-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   Blocs image / texte (pages projets : Delsey, Ukulélé, Synaé, CEDS...)
+   ========================================================================== */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.row.reverse {
+  flex-direction: row-reverse;
+}
+
+.row-image {
+  width: 45%;
+  flex: 0 0 45%;
+}
+
+.row-image img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 6px;
+  display: block;
+}
+
+.row-text {
+  width: 55%;
+  flex: 1;
+}
+
+.row-text p,
+.row-text .feature-list {
+  margin-bottom: 8px;
+}
+
+.row-double {
+  margin-bottom: 2rem;
+}
+
+.row-double .images-duo {
+  display: flex;
+  align-items: flex-start;
+  gap: 2cm;
+  margin-bottom: 1rem;
+}
+
+.row-double .images-duo img {
+  width: calc(50% - 1cm) !important;
+  height: auto !important;
+  border-radius: 6px;
+  display: block;
+}
+
+.row-triple {
+  margin-bottom: 2rem;
+}
+
+.row-triple .images-trio {
+  display: flex;
+  gap: 1cm;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.row-triple .images-trio img {
+  width: calc((100% - 2cm) / 3);
+  height: 280px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: rgba(244, 177, 131, 0.06);
+  border: 1px solid rgba(244, 177, 131, 0.25);
+  display: block;
+}
+
+/* ==========================================================================
+   Grille de projets (Mes projets, Index)
+   ========================================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.grid:last-child {
+  margin-bottom: 0;
+}
+
+.block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: brown;
+  font-weight: 700;
+}
+
+.block h4 {
+  font-size: 1rem;
+  margin: 18px 0 10px;
+}
+
+.img {
+  height: 160px;
+  background: #e5e5e5;
+  margin-bottom: 12px;
+}
+
+.block .project-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: underline;
+}
+
+.block .project-link:hover {
+  color: #7a5b28;
+}
+
+/* ==========================================================================
+   Ma méthodologie : hero, cartes, pastilles, timeline d'étapes, tableau
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, rgba(244, 177, 131, .35), rgba(255, 217, 102, .20) 55%, transparent 85%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted-warm);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: brown;
+}
+
+.desc {
+  color: var(--muted-warm);
+}
+
+.pill-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--tag);
+  border: 1px solid rgba(224, 169, 92, .45);
+  color: var(--text-color);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+@media (min-width: 920px) {
+  .split {
+    grid-template-columns: 1.1fr .9fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .grid.methodologie-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Timeline d'étapes (Ma méthodologie) */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(244, 177, 131, .10);
+  border: 1px solid rgba(244, 177, 131, .30);
+}
+
+.step .icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 217, 102, .35);
+  border: 1px solid rgba(244, 177, 131, .30);
+  font-size: 20px;
+}
+
+.step h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.mini-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.mini-list li {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 217, 102, .25);
+  border: 1px solid rgba(244, 177, 131, .30);
+  color: var(--text-color);
+}
+
+.down {
+  text-align: center;
+  color: var(--text-color);
+  opacity: .6;
+  font-size: 16px;
+  user-select: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(244, 177, 131, .05);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(244, 177, 131, .25);
+  vertical-align: top;
+  text-align: left;
+  color: var(--text-color);
+}
+
+th {
+  font-weight: 600;
+  background: rgba(255, 217, 102, .30);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.note {
+  margin-top: 12px;
+  color: var(--muted-warm);
+  font-size: 13px;
+}
+
+/* ==========================================================================
+   Mon cursus et mes diplômes : frise chronologique, compétences, langues
+   ========================================================================== */
+/* Frise verticale (Mon cursus et mes diplômes) */
+.timeline-item {
+  position: relative;
+  margin-left: 12px;
+  padding-left: 32px;
+  margin-bottom: 2.2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Le point de la frise */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e0a95c;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px rgba(244, 177, 131, 0.5);
+  z-index: 1;
+}
+
+/* La barre qui relie ce point au point suivant */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 6px;
+  width: 3px;
+  height: calc(100% + 2.2rem);
+  background: rgba(244, 177, 131, 0.45);
+  z-index: 0;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-date {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--muted-warm);
+  background: var(--tag);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.type-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-warm);
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+.timeline-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.timeline-card .diploma-img {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 110px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(244, 177, 131, 0.15),
+    rgba(244, 177, 131, 0.15) 10px,
+    rgba(255, 217, 102, 0.15) 10px,
+    rgba(255, 217, 102, 0.15) 20px
+  );
+  border: 1px dashed rgba(244, 177, 131, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted-warm);
+  padding: 8px;
+  object-fit: cover;
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+.timeline-text .school {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.timeline-text p {
+  color: var(--muted-warm);
+  margin-bottom: 0;
+}
+
+.timeline-card.text-only .timeline-text .feature-list {
+  margin: 8px 0 0 1.1rem;
+}
+
+.timeline-card.text-only .timeline-text .feature-list li {
+  color: var(--muted-warm);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lang-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lang-list li {
+  background: var(--tag);
+  border: 1px solid rgba(224, 169, 92, 0.45);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Footer : en bas de la page sur tout le site
+   ========================================================================== */
+footer {
+  background-color: rgba(244, 177, 131, 0.2);
+  padding: 1.2rem 2cm;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer p {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 900px) {
+  nav.navbar ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  aside.sidebar {
+    width: 100%;
+    flex: none;
+  }
+
+  aside.sidebar .liens p:first-of-type {
+    white-space: normal;
+  }
+
+  .main-column > .wrapper,
+  .content,
+  main.content {
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .row,
+  .row.reverse {
+    flex-direction: column;
+  }
+
+  .row-image,
+  .row-text {
+    width: 100%;
+    flex: none;
+  }
+
+  .row-double .images-duo,
+  .row-triple .images-trio {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .row-double .images-duo img,
+  .row-triple .images-trio img {
+    width: 100%;
+  }
+
+  .row-triple .images-trio img {
+    height: 220px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline-item {
+    margin-left: 4px;
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    left: -8px;
+  }
+
+  .timeline-item::after {
+    left: -1px;
+  }
+
+  .timeline-card {
+    flex-direction: column;
+  }
+
+  .timeline-card .diploma-img {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Bouton "Retour en haut"
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--nav-active);
+  color: var(--text-color);
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s, background-color 0.2s ease;
+  z-index: 50;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--nav-bg);
+}
+
+@media (max-width: 700px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   Roadmap projet (frise horizontale par phase, ex. planning Delsey)
+   ========================================================================== */
+.roadmap {
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+}
+
+.roadmap-scale {
+  position: relative;
+  height: 20px;
+  min-width: 700px;
+  margin-left: 232px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(244, 177, 131, 0.35);
+}
+
+.roadmap-scale span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted-warm);
+  white-space: nowrap;
+}
+
+.roadmap-scale span:first-child {
+  transform: translateX(0);
+}
+
+.roadmap-scale span:last-child {
+  transform: translateX(-100%);
+}
+
+.roadmap-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 700px;
+  margin-bottom: 10px;
+}
+
+.roadmap-row .roadmap-label {
+  flex: 0 0 220px;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.roadmap-row .roadmap-track {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  background: rgba(244, 177, 131, 0.08);
+  border-radius: 999px;
+}
+
+.roadmap-row .roadmap-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.roadmap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted-warm);
+}
+
+.roadmap-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.roadmap-legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  .roadmap-row .roadmap-label {
+    flex-basis: 150px;
+    font-size: 0.72rem;
+  }
+}
