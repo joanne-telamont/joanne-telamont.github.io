@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon Portfolio - Projet - Synaé </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ===== Aside gauche ===== -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+      <img src="img/illustration-JT-7nov_ 2025.png" alt="Photo de profil">
+      <h2>Joanne TELAMONT</h2>
+      
+        <h3>Cheffe de projet digital — Transformation des outils, SI et expérience utilisateur</h3>
+      <p>
+        Passionnée par le design et l'innovation, je mets mon expertise
+        au service de projets créatifs et techniques, avec une attention
+        particulière portée à l'expérience utilisateur.
+      </p>
+
+      <div class="liens">
+        <p>📍 20 rue des Reculettes</p> 
+        <p>75013 Paris</p>
+        <p>📱 07 78 90 42 37</p>
+        <a href="mailto:j.telamont@gmail.com">✉️ j.telamont@gmail.com</a>
+        <a href="https://www.linkedin.com/in/joanne-telamont/" target="_blank" rel="noopener">🔗 linkedin.com/in/joanne-telamont</a>
+       </div>
+      </div>
+    </aside>
+
+    <!-- ===== Colonne de droite : navbar + contenu + footer ===== -->
+    <div class="main-column">
+
+      <!-- ===== Barre de navigation ===== -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="mon-expertise.html">Mon expertise</a></li>
+          <li><a href="ma-methodologie.html">Ma méthodologie</a></li>
+          <li><a href="mes-projets.html" class="active">Mes projets</a></li>
+          <li><a href="mon-cursus-et-mes-diplomes.html">Mon cursus et Mes diplômes</a></li>
+        </ul>
+      </nav>
+
+      <!-- ===== Contenu principal ===== -->
+      <main class="content">
+
+        <!-- Fil d'Ariane -->
+        <nav class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span class="separator">&gt;</span>
+          <a href="mes-projets.html">Mes projets</a>
+          <span class="separator">&gt;</span>
+          <span>Synaé</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1 class="section-title">Projet Synaé</h1>
+
+        <h2>Refonte de l'application web d’évaluation des établissements et services social / médico-social</h2>
+
+        <h3 style="color: #111; font-weight: lighter;">Optimisation du parcours utilisateur</h3>
+
+        <h3 style="color: #111; font-weight: lighter;">Réduction des tickets support</h3>
+
+        <h2>Mon rôle</h2>
+        <div>
+          <ul class="feature-list">
+            <li>Analyse UX et UI</li>
+            <li>Recommandations</li>
+            <li>Prototypage</li>
+            <li>Vision produit</li>
+          </ul>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- Sommaire ancré : reprend tous les titres h3 "section-title" -->
+        <!-- ========================================================= -->
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <p class="toc-title">contenu de la page</p>
+          <ul>
+            <li><a href="#concept-produit">Concept produit</a></li>
+            <li><a href="#problematique">Problématique</a></li>
+            <li><a href="#cibles">Cibles</a></li>
+            <li><a href="#contraintes">Contraintes</a></li>
+            <li><a href="#methodes-utilisees">Méthodes utilisées</a></li>
+            <li><a href="#problemes-identifies">Problèmes identifiés de l'application Synaé</a></li>
+            <li><a href="#solutions-profils">Solutions profils</a></li>
+            <li><a href="#optimisation-ux-ui">Optimisation UX / UI</a></li>
+            <li><a href="#resultat-comparatif">Résultat comparatif</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+
+        <!-- Deux images côte à côte / texte en dessous -->
+        <h3 id="concept-produit" class="section-title">Concept produit</h3>
+        <div class="row-double">
+          <div class="images-duo">
+            <img src="img/concept-produit-synae.png" alt="Visuel du projet Synaé- Concept produit">
+            <img src="img/concept-produit-synae2.png" alt="Visuel du projet Synaé - Concept produit 2">
+          </div>
+          <ul class="feature-list">
+            <li>Application d’évaluation ESSMS (Etablissements et Service Social Médico-Social) / SMS (Service Médico-Social)</li>
+            <li>Auto-évaluation et audits</li>
+            <li>Export / import Excel</li>
+          </ul>
+        </div>
+
+        <h3 id="problematique" class="section-title">Problématique</h3>
+        <ul class="feature-list">
+          <li>Notice trop longue (150 pages)</li>
+          <li>Tickets récurrents</li>
+          <li>Temps de chargement des pages et usage Excel</li>
+        </ul>
+
+        <!-- Image gauche / texte droite -->
+        <h3 id="cibles" class="section-title">Cibles</h3>
+        <div class="row">
+          <div class="row-image">
+            <img src="img/cible-synae.png" alt="Visuel du projet Synaé - Problématique">
+          </div>
+          <div class="row-text">
+            <ul class="feature-list">
+              <li>Référents ESSMS (Etablissements et Service Social Médico-Social)</li>
+              <li>Évaluateurs ESSMS & SMS (Service Médico-Social)</li>
+              <li>Coordonnateurs SMS</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 id="contraintes" class="section-title">Contraintes</h3>
+        <ul class="feature-list">
+          <li>Cadre réglementaire (COFRAC)</li>
+          <li>Pas d’accès direct aux utilisateurs finaux</li>
+          <li>Design limité (service public)</li>
+        </ul>
+
+        <!-- Texte gauche / image droite -->
+        <h3 id="methodes-utilisees" class="section-title">Méthodes utilisées</h3>
+        <div class="row reverse">
+          <div class="row-image">
+            <img src="img/methode-utilise-synae1.png" alt="Visuel du projet Synaé - Méthodes utilisées">
+          </div>
+          <div class="row-text">
+            <ul class="feature-list">
+              <li>Audit UX / UI (test produit)</li>
+              <li>Analyse des tickets support</li>
+              <li>Prototypage Figma</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image gauche / texte droite -->
+        <h3 id="problemes-identifies" class="section-title">Problèmes identifiés de l’application Synaé</h3>
+        <div class="row">
+          <div class="row-image">
+            <img src="img/probleme-application-synae.png" alt="Visuel du projet Synaé - Problèmes identifiés de l’application Synaé">
+          </div>
+          <div class="row-text">
+            <ul class="feature-list">
+              <li>Navigation complexe</li>
+              <li>Profils trop similaires</li>
+              <li>Erreurs difficiles à identifier</li>
+              <li>Imports Excel problématiques</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Trois images côte à côte / texte en dessous -->
+        <h3 id="solutions-profils" class="section-title">Solutions profils</h3>
+        <div class="row-triple">
+          <div class="images-trio">
+            <img src="img/solution-profil-synae.png" alt="Visuel du projet Synaé - Solutions profils">
+            <img src="img/solution-profil-synae2.png" alt="Visuel du projet Synaé - Solutions profils 2">
+            <img src="img/solution-profil-synae3.png" alt="Visuel du projet Synaé - Solutions profils 3">
+          </div>
+          <ul class="feature-list">
+            <li>1 couleur par profil utilisateur </li>
+            <li>Lien direct MPH depuis l’application synaé</li>
+            <li>Signalement des messages en attente</li>
+          </ul>
+        </div>
+
+        <!-- Trois images côte à côte / texte en dessous -->
+        <h3 id="optimisation-ux-ui" class="section-title">Optimisation UX / UI</h3>
+        <div class="row-triple">
+          <div class="images-trio">
+            <img src="img/optimisation-ux_ui-synae.png" alt="Visuel du projet Synaé - Optimisation UX / UI">
+            <img src="img/optimisation-ux_ui-synae2.png" alt="Visuel du projet Synaé - cOptimisation UX / UI 2">
+            <img src="img/optimisation-ux_ui-synae3.png" alt="Visuel du projet Synaé - Optimisation UX / UI 3">
+          </div>
+          <ul class="feature-list">
+            <li>Simplification du parcours utilisateur</li>
+            <li>Meilleure lisibilité</li>
+            <li>Expérience client plus fluide</li>
+            <li>Export et import d’Excel facilité</li>
+            <li>Découpage des pages</li>
+            <li>Barre de progression</li>
+            <li>Signalement des erreurs</li>
+          </ul>
+        </div>
+
+        <!-- Deux images côte à côte / texte en dessous -->
+        <h3 id="resultat-comparatif" class="section-title">Résultat comparatif</h3>
+        <div class="row-double">
+          <div class="images-duo">
+            <img src="img/resultat-comparatif-synae1.png" alt="Visuel du projet Synaé - Résultat comparatif">
+            <img src="img/resultat-comparatif-synae2.png" alt="Visuel du projet Synaé - Résultat comparatif 2">
+          </div>
+          <ul class="feature-list">
+            <li>Notice réduite : 150 → 72 pages</li>
+            <li>Interface plus claire</li>
+            <li>Parcours amélioré</li>
+          </ul>
+        </div>
+
+        <h3 id="conclusion" class="section-title">Conclusion</h3>
+        <ul class="feature-list">
+          <li>Projet orienté amélioration continue</li>
+          <li>Impact UX/UI et business</li>
+          <li>Approche centrée utilisateur</li>
+          <li>Importance des tests utilisateurs</li>
+          <li>Limites sans feedback direct</li>
+          <li>Décisions basées sur data indirecte</li>
+        </ul>
+
+      </main>
+
+      <!-- ===== Footer : toujours en bas de la page ===== -->
+      <footer>
+        <p>&copy; 2026 - Portfolio Joanne TELAMONT, Cheffe de projet digital</p>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ===== Bouton retour en haut ===== -->
+  <button id="backToTop" class="back-to-top" aria-label="Retour en haut de la page">↑</button>
+  <script src="script.js"></script>
+
+</body>
+</html>
